@@ -28,7 +28,9 @@ const onClickAdd = () => {
     const backButton = document.createElement("button");
     backButton.innerText = "戻す";
     backButton.addEventListener("click", () => {
-      alert("戻す");
+      //押された戻すボタンの親タグをリストから削除
+      const deleteTarget = backButton.parentNode;
+      document.getElementById("complete-list").removeChild(deleteTarget);
     });
 
     //divタブの子要素に各要素を設定
